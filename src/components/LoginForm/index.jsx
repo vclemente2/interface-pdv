@@ -4,12 +4,8 @@ import StyledForm from "../StyledForm";
 export default function LoginForm() {
   return (
     <StyledForm>
-      <InputText identificador="emailLogin" type="email">
-        E-mail
-      </InputText>
-      <InputText identificador="senha" type="password">
-        Senha
-      </InputText>
+      <InputText label="E-mail" type="email" />
+      <InputText label="Senha" type="password" />
     </StyledForm>
   );
 }

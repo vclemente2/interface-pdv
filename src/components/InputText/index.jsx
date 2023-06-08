@@ -1,8 +1,12 @@
-export default function InputText({ identificador, children, type }) {
+import { v4 as uuid } from "uuid";
+
+export default function InputText({ label, type }) {
+  const id = uuid();
+
   return (
     <>
-      <label htmlFor={identificador}>{children}</label>
-      <input id={identificador} type={type} />
+      <label htmlFor={id}>{label}</label>
+      <input id={id} type={type} />
     </>
   );
 }
