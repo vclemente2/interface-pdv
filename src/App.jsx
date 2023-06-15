@@ -1,10 +1,16 @@
-import LoginForm from "./components/LoginForm";
+import { GlobalStyle } from "./GlobalStyle";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
 
 function App() {
   return (
     <>
-      <h1>Hello World!</h1>
-      <LoginForm />
+      <GlobalStyle />
+      <Router>
+        <Routes>
+          <Route exact path="/" Component={Login} />
+        </Routes>
+      </Router>
     </>
   );
 }
